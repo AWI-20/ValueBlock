@@ -1,0 +1,17 @@
+{
+    "name": "game-server",
+    "version": "1.0.0",
+    "description": "Vercel deployment of game server and client",
+    "main": "api/index.js",
+    "scripts": {
+      "start": "node api/index.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "sqlite3": "^5.0.0",
+      "body-parser": "^1.19.0",
+      "bcrypt": "^5.0.0",
+      "cors": "^2.8.5"
+    }
+  }
+  
