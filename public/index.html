@@ -203,7 +203,7 @@
         function login() {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
-            fetch("http://localhost:3000/api/login", {
+            fetch("/api/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -237,7 +237,7 @@
         function register() {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
-            fetch("http://localhost:3000/api/register", {
+            fetch("/api/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -258,7 +258,7 @@
             
             console.log('正在加载用户最高分:', user.username); // 添加日志
             
-            return fetch("http://localhost:3000/api/highscore?username=" + user.username)
+            return fetch("/api/highscore?username=" + user.username)
                 .then(res => res.json())
                 .then(data => {
                     console.log('获取到最高分数据:', data); // 添加日志
@@ -276,7 +276,7 @@
         }
 
         function saveHighScore(highScore) {
-            fetch("http://localhost:3000/api/highscore", {
+            fetch("/api/highscore", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -505,7 +505,7 @@
         function submitScore(score) {
             if (!user) return;
             
-            fetch("http://localhost:3000/api/score", {
+            fetch("/api/score", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
